@@ -7,25 +7,25 @@
 
 
 /*
-	PXA255 OS timers controller
+   PXA255 OS timers controller
 
-	PURRPOSE: timers are useful for stuff :)
+   PURRPOSE: timers are useful for stuff :)
 
 */
 
-#define PXA255_TIMR_BASE	0x40A00000UL
-#define PXA255_TIMR_SIZE	0x00010000UL
+#define PXA255_TIMR_BASE   0x40A00000UL
+#define PXA255_TIMR_SIZE   0x00010000UL
 
 
 typedef struct{
 
-	Pxa255ic* ic;
+   Pxa255ic* ic;
 
-	UInt32 OSMR[4];	//Match Register 0-3
-	UInt32 OIER;	//Interrupt Enable
-	UInt32 OWER;	//Watchdog enable
-	UInt32 OSCR;	//Counter Register
-	UInt32 OSSR;	//Status Register
+   UInt32 OSMR[4];   //Match Register 0-3
+   UInt32 OIER;   //Interrupt Enable
+   UInt32 OWER;   //Watchdog enable
+   UInt32 OSCR;   //Counter Register
+   UInt32 OSSR;   //Status Register
 
 }Pxa255timr;
 
@@ -34,3 +34,4 @@ void pxa255timrTick(Pxa255timr* timr);
 
 
 #endif
+

@@ -6,9 +6,9 @@
 
 typedef struct{
 
-	UInt32 adr;
-	UInt32 sz;
-	UInt32* buf;
+   UInt32 adr;
+   UInt32 sz;
+   UInt32* buf;
 
 }ArmRam;
 
@@ -21,3 +21,4 @@ Boolean ramDeinit(ArmRam* ram, ArmMem* mem);
 
 
 #endif
+

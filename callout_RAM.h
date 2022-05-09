@@ -7,8 +7,8 @@
 
 typedef struct{
 
-	UInt32 adr;
-	UInt32 sz;
+   UInt32 adr;
+   UInt32 sz;
 
 }CalloutRam;
 
@@ -21,3 +21,4 @@ Boolean coRamDeinit(CalloutRam* ram, ArmMem* mem);
 
 
 #endif
+

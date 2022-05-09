@@ -7,25 +7,25 @@
 
 
 /*
-	PXA255 OS RTC controller
+   PXA255 OS RTC controller
 
-	PURRPOSE: it's nice to know what time it is
+   PURRPOSE: it's nice to know what time it is
 
 */
 
-#define PXA255_RTC_BASE		0x40900000UL
-#define PXA255_RTC_SIZE		0x00001000UL
+#define PXA255_RTC_BASE      0x40900000UL
+#define PXA255_RTC_SIZE      0x00001000UL
 
 
 typedef struct{
 
-	Pxa255ic* ic;
+   Pxa255ic* ic;
 
-	UInt32 RCNR_offset;	//RTC counter offset from our local time
-	UInt32 RTAR;		//RTC alarm
-	UInt32 RTSR;		//RTC status
-	UInt32 RTTR;		//RTC trim - we ignore this alltogether
-	UInt32 lastSeenTime;	//for HZ interrupt
+   UInt32 RCNR_offset;   //RTC counter offset from our local time
+   UInt32 RTAR;      //RTC alarm
+   UInt32 RTSR;      //RTC status
+   UInt32 RTTR;      //RTC trim - we ignore this alltogether
+   UInt32 lastSeenTime;   //for HZ interrupt
 
 }Pxa255rtc;
 
@@ -34,3 +34,4 @@ void pxa255rtcUpdate(Pxa255rtc* rtc);
 
 
 #endif
+
